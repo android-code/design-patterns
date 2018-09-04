@@ -1,0 +1,4 @@
+interface Flyweight {
+
+    void operation();
+}
