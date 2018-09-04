@@ -1,0 +1,4 @@
+interface Subject {
+
+    void action();
+}
