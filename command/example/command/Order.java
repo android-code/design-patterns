@@ -1,0 +1,4 @@
+interface Order {
+
+    void execute();
+}
