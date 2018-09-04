@@ -1,0 +1,4 @@
+interface Container {
+
+    Iterator getIterator();
+}
