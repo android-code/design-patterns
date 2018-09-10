@@ -15,7 +15,7 @@ public class Container1 implements Container {
         return new Iterator1();
     }
 
-    private class Iterator1 implements Iterator1 {
+    private class Iterator1 implements Iterator {
 
         @Override
         public boolean hasNext() {

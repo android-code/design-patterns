@@ -12,7 +12,6 @@ public class Main {
 
 		//iterate and do action for every elements of container
 		Iterator<String> iterator = container.getIterator();
-		ConcreteContainer container = new ConcreteContainer();
 		while(iterator.hasNext()) {
 		    //do some action on the object
 		    String person = iterator.next();

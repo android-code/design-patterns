@@ -2,9 +2,9 @@ public class Main {
 
 	public static void main() {
 		//create chain of responsibility depends
-		Handler main = new ConcreteHandler1();
-		Handler handler2 = new ConcreteHandler2();
-		Handler handler3 = new ConcreteHandler3();
+		Handler main = new Handler1();
+		Handler handler2 = new Handler2();
+		Handler handler3 = new Handler3();
 		main.setSuccessor(handler2);
 		handler2.setSuccessor(handler3);
 

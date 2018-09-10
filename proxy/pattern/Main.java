@@ -1,7 +1,7 @@
 public class Main {
 
 	public static void main() {
-		Subject subject = new ConreteSubject();
+		Subject subject = new RealSubject();
 		subject.action(); //always execute
 
 		Subject proxy = new Proxy();

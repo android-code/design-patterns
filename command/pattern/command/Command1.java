@@ -2,7 +2,7 @@ public class Command1 implements Command {
 
     private Receiver receiver;
 
-    public ConcreteCommand(Receiver receiver) {
+    public Command1(Receiver receiver) {
         this.receiver = receiver;
     }
     

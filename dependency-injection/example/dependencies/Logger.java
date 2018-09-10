@@ -1,4 +1,4 @@
-public interface Logger {
+interface Logger {
 
     void logState(AppState appState);
     void logClickEvent(ClickEvent clickEvent);
