@@ -1,4 +1,4 @@
 interface Expression {
 	
-	String interpret(String number);
+    String interpret(String number);
 }

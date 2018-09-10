@@ -1,16 +1,14 @@
 public class Context {
 	
-	//some fields
-	private String text;
+    //some fields
+    private String text;
 
-	//constructor and methods
-	public Context(String text) {
-		this.text = text;
-	}
+    //constructor and methods
+    public Context(String text) {
+        this.text = text;
+    }
 
-	public String getText() {
-		return text;
-	}
-
-	//other methods
+    public String getText() {
+        return text;
+    }
 }
