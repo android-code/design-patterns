@@ -13,7 +13,7 @@ public class Controller {
         //do proper action
         String input = view.getInput();
         try {
-            boolean success = model.addTask(input);
+            boolean success = model.addData(input);
             if(success)
                 view.updateText();
             else

@@ -1,15 +1,15 @@
 public class ViewControllerActivity extends AppCompatActivity {
 
-    private EditText loginEdit;
-    private EditText passwordEdit;
-    private Button loginButton;
+    private EditText startEdit;
+    private EditText destinationEdit;
+    private Button searchButton;
 
-    private LoginModel model;
+    private TrackModel model;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        model = new LoginModel(this);
+        model = new TrackModel(this);
 
         //in clear MVC inflating layout, listeners and views update
         //should be done in separeted View layer
@@ -21,20 +21,20 @@ public class ViewControllerActivity extends AppCompatActivity {
     //view layer
     private void initView() {
         setContentView(R.layout.viewcontroller_activity);
-        loginEdit = findViewById(R.id.loginEdit);
-        passwordEdit = findViewById(R.id.passwordEdit);
-        loginButton = findViewById(R.id.loginButton);
+        startEdit = findViewById(R.id.startEdit);
+        destinationEdit = findViewById(R.id.destinationEdit);
+        searchButton = findViewById(R.id.searchButton);
     }
 
     //view layer set listener passed from controller
     private void setListeners() {
-        loginButton.setOnClickListener(v -> { loginAction(); });
+        searchButton.setOnClickListener(v -> { searchAction(); });
     }
 
     //view layer
     private void setViews() {
-        String login = model.getLastLogin();
-        loginEdit.setText(login);
+        String home = model.getHomePlace();
+        startEdit.setText(home);
     }
 
     //controller layer runs this method on the view layer
@@ -43,16 +43,17 @@ public class ViewControllerActivity extends AppCompatActivity {
     }
 
     //controller layer
-    private void loginAction() {
+    private void searchAction() {
         //controller get inputs from view
-        String login = loginEdit.getText().toString();
-        String password = passwordEdit.getText().toString();
-        boolean success = model.login(login, password);
-        if(success) {
-            //go to another activity
+        String login = startEdit.getText().toString();
+        String destination = destinationEdit.getText().toString();
+        String result = model.search(start, destination);
+        if(result.equals("EMPTY")) {
+            showError("Incorrect login or password");
+            
         }
         else {
-            showError("Incorrect login or password");
+            //show search result in another activity/popup or in list
         }
     }
 

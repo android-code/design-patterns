@@ -28,7 +28,7 @@ public class View {
 
     public void updateText() {
         //update tasks list in TextView
-        textView.setText(model.getTasks());
+        textView.setText(model.getData());
         //show response text in the textView
     }
 }

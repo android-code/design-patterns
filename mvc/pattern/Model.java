@@ -9,12 +9,12 @@ public class Model {
         database = new Database();
     }
 
-    public boolean addTask(String input) {
+    public boolean addData(String input) {
         boolean isSuccess = database.add("TASK", input);
         return success;
     }
 
-    public String getTasks() {
+    public String getData() {
         String tasks = "";
         for(int i=0; i<database.size("TASK"); i++)
             tasks += database.get("TASK", i) + "\n";
