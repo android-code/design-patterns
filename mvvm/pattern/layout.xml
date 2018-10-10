@@ -1,0 +1,24 @@
+<layout>
+
+    <!-- some parent layout -->
+    <!-- import some classes if needed -->
+    <!-- bind ViewModel instance from View class as viewModel variable -->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@={viewModel.input}"/> <!-- two way data binding -->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:onClick="@{viewModel.onButtonClicked}"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="@{viewModel.data.equals("EMPTY") ? View.GONE : View.VISIBLE}"
+        android:text="@{viewModel.data}"/>        
+
+</layout>
