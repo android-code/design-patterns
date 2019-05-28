@@ -34,6 +34,17 @@ public class ViewActivity extends AppCompatActivity implements View {
     }
 
     @Override
+    public void setLastLogin(String login) {
+        loginEdit.setText(login);
+    }
+
+    @Override
+    public void navigateToHome() {
+        //go to another activity (like home screen)
+        //instead of doing logic operations it can be delegate to Router helper class
+    }
+
+    @Override
     public void showError() {
         Toast.makeText(this, "Incorrect login or password", Toast.LENGTH_LONG).show();
     }
@@ -56,12 +67,6 @@ public class ViewActivity extends AppCompatActivity implements View {
         else {
             //clear error
         }
-    }
-
-    @Override
-    public void navigateToHome() {
-        //go to another activity (like home screen)
-        //instead of doing logic operations it can be delegate to Router helper class
     }
 
     private void loginAction() {

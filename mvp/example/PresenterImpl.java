@@ -30,6 +30,21 @@ public class PresenterImpl implements Presenter, OnResult {
         interactor.getSavedLogin();
     }
 
+    @Override
+    public void onLoginSuccess() {
+        view.navigateToHome();
+    }
+    
+    @Override
+    public void onLoginFail() {
+        view.showError();
+    }
+        
+    @Override
+    public void onSavedLoginExists(String savedLogin) {
+        view.setLastLogin(savedLogin);
+    }
+
     private boolean isLoginValid(String login) {
         //check rules e.g. no special characters
         return true; //mock

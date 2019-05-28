@@ -13,6 +13,7 @@ public class InteractorImpl implements Interactor {
         sharedPref = context.getPreferences(Context.MODE_PRIVATE);
     }
 
+    @Override
     public void login(String login, String password) {
         //use some network library to login
         int code = Response.OK; //mock code response from network
@@ -26,6 +27,7 @@ public class InteractorImpl implements Interactor {
         }
     }
 
+    @Override
     public void getSavedLogin() {
         String savedLogin = sharedPref.getString("login", "");
         if(!savedLogin.equals(""))
