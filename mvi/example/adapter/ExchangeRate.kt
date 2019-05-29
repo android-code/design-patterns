@@ -1,1 +1,0 @@
-data class ExchangeRate (val currency : String, val price : Double)
